@@ -1,9 +1,27 @@
 // BACKEND LOGIC
-
 function placeOrder(size, toppingsArray){
 
-  console.log(toppingsArray);
-  console.log(size);
+function Pizza(size, toppingsArray) {
+  this.size = size;
+  this.toppingsArray = toppingsArray;
+};
+
+var newPizza = new Pizza(size, toppingsArray);
+// console.log("newPizza is ", newPizza);
+
+Pizza.prototype.assemble = function(){
+    // later, add logic to calc price here
+  var costToppings = toppingsArray.length;
+  var costTotal = 10 + costToppings;
+  return ("Size: " + this.size + "  Toppings: " + this.toppingsArray + "   Cost: " + costTotal );
+}
+
+// console.log(newPizza.assemble());
+
+var result = newPizza.assemble();
+
+return result
+
 };
 
 
