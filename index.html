@@ -11,14 +11,25 @@
       <h1>Order a Pizza</h1>
           <h2>Make some selections</h2>
           <form id="pizzaEntryForm">
-            <div class="form-group">
-              <label for="userInput">Size</label>
-              <input type="text" class="form-control" id="userInput">
+
+            <p>Check each desired topping:</p>
+            <div class="form" id="toppings">
+              <input type="checkbox" name="toppings" value="pineapple"> Pineapple<br>
+              <input type="checkbox" name="toppings" value="anchovies"> Anchovies<br>
+              <input type="checkbox" name="toppings" value="american cheese">American cheese<br>
             </div>
+
+            <select class="form-control" id="size">
+            <option>Medium</option>
+            <option>Large</option>
+            <option>X-Large</option>
+            <option>Jumbo</option>
+            </select>
+
             <button type="submit" class="btn">Place your order and I'll tell you the total</button>
           </form>
 
-          <h2>Your order :</h2>
+          <h4>Your order and its total :</h4>
           <p id="output">
           </p>
   </body>

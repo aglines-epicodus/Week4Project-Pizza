@@ -1,9 +1,9 @@
 // BACKEND LOGIC
 
-function placeOrder(input){
+function placeOrder(size, toppingsArray){
 
-  console.log(input);
-  
+  console.log(toppingsArray);
+  console.log(size);
 };
 
 
@@ -11,8 +11,16 @@ function placeOrder(input){
 $(document).ready(function() {
   $("#pizzaEntryForm").submit(function() {
     event.preventDefault();
-    var input = $("#userInput").val();
-    var output = placeOrder(input);
+
+    var size = $("#size").val();
+    var toppingsArray = [];
+
+    $("input:checkbox[name=toppings]:checked").each(function(){
+      var temp = $(this).val();
+      toppingsArray.push(temp);
+    });
+    // console.log(toppings);
+    var output = placeOrder(size, toppingsArray);
     $("#output").text(output);
   });
 });
