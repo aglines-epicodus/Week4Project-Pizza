@@ -1,4 +1,5 @@
 // BACKEND LOGIC
+var toppingsArray = [];
 
 function Pizza(size, toppingsArray) {
   this.size = size;
@@ -7,14 +8,10 @@ function Pizza(size, toppingsArray) {
 
 Pizza.prototype.assemble = function(){
   var costToppings = toppingsArray.length;
+  console.log(costToppings);
   var costTotal = 10 + costToppings;
+  console.log(costTotal);
   return ("Size: " + this.size + "  Toppings: " + this.toppingsArray + "   Cost: " + costTotal );
-}
-
-function placeOrder(size, toppingsArray){
-  var result = newPizza.assemble();
-  return result
-
 };
 
 
@@ -24,17 +21,16 @@ $(document).ready(function() {
     event.preventDefault();
 
     var size = $("#size").val();
-    var toppingsArray = [];
 
     $("input:checkbox[name=toppings]:checked").each(function(){
       var temp = $(this).val();
       toppingsArray.push(temp);
     });
-    
+
     var newPizza = new Pizza(size, toppingsArray);
-    
-    var output = placeOrder(size, toppingsArray);
-    
+    var output = newPizza.assemble();
+    // var output = placeOrder(size, toppingsArray);
+
     $("#output").text(output);
   });
 });
