@@ -6,13 +6,13 @@
 
 ## Description
 
-Pizza: A Web Site
+A web site to place an order for a pizza.
 
 ## Specifications
 
 |  Behavior | Input  | Output  |
 |---|---|---|
-| Will allow a user to choose size, toppings  | multiple toppings choice ; size  |  Final cost based on toppings and size | 
+| Will allow a user to choose size and toppings for a pizza  | Multiple toppings choice ; size  |  Final cost based on toppings and size | 
 
 
 ## Setup/Installation Requirements
