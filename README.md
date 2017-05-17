@@ -8,6 +8,13 @@
 
 Pizza: A Web Site
 
+## Specifications
+
+|  Behavior | Input  | Output  |
+|---|---|---|
+| Will allow a user to choose size, toppings  | multiple toppings choice ; size  |  Final cost based on toppings and size | 
+
+
 ## Setup/Installation Requirements
 
 * Clone this repository
